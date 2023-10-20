@@ -35,4 +35,12 @@ public class Post {
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "subredditId", referencedColumnName = "subredditId")
     private Subreddit subreddit;
+
+    public Post(Long postId, String postName, String url, String description, Integer voteCount) {
+        this.postId = postId;
+        this.postName = postName;
+        this.url = url;
+        this.description = description;
+        this.voteCount = voteCount;
+    }
 }
